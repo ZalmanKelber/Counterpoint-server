@@ -18,7 +18,7 @@ class MidiWriter:
         for i, line in enumerate(lines):
             #75 is the "recorder" instrument in General MIDI
             instrument = 75 if i == 0 else 70
-            volume_level = 100 if i == 0 else 85
+            volume_level = 100 if i == 0 else 95
             CounterpointMIDI.addProgramChange(i, i, 0, instrument)
             track = i
             channel = i
