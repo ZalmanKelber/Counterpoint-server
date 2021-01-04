@@ -48,7 +48,8 @@ class GenerateFromJson:
             return ""
         else:
             counterpoint_id = str(uuid4())
-            shutil.rmtree("generated_files_store")
+            if os.path.isdir("generated_files_store"):
+                shutil.rmtree("generated_files_store")
             os.mkdir("generated_files_store")
 
             mw = MidiWriter()
